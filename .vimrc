@@ -1,3 +1,5 @@
+set nocompatible
+set nu
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
@@ -14,3 +16,6 @@ set wrap linebreak nolist
 set tw=79
 set formatoptions+=t
 set mouse=a
+set foldmethod=syntax
+set nofoldenable
+autocmd BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
